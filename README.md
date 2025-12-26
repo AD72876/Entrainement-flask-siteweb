@@ -18,7 +18,7 @@ Mini application web developpée avec Flask permettant:
 - Messages flash (erreurs / succès)
 - Stockage persistant via JSON
 
-## Installation
+## Installation (http://127.0.0.1:8000/)
 
 ```bash
 git clone https://github.com/TON_PSEUDO/flask-message-board.git
@@ -26,4 +26,4 @@ cd flask-message-board
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python app.py
+python app2.py
