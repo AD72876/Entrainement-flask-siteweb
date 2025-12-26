@@ -6,23 +6,24 @@ app2= Flask(__name__)
 app2.secret_key = "cle-secrete"
 
 
-Liste_message=[]
+
 error_message=None
 
 
 FICHIER_JOHNSON="messages.json"
 if os.path.exists(FICHIER_JOHNSON):
-    with open(FICHIER_JOHNSON, "r", encoding="utf-8") as f:
-        Liste_message=json.load(f)
+    with open(FICHIER_JOHNSON, "r", encoding="utf-8") as popo:
+        Liste_message=json.load(popo)
 else:
     Liste_message=[]
 
 
 def sauvegarder_messages():
-    with open(FICHIER_JOHNSON, "w", encoding="utf-8") as f:
-        json.dump(Liste_message, f, indent=4, ensure_ascii=False)
+    with open("messages.json", "w", encoding="utf-8") as f:
+            json.dump(Liste_message, f, indent=4, ensure_ascii=False)
 
 @app2.route("/")
+
 
 def home():
     global error_message
@@ -32,7 +33,6 @@ def home():
 
 
 
-Liste_message=[]
 error_message=None
 @app2.route("/add", methods=["POST"])
 def add_message():
