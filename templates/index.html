@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de messages</title>
+</head>
+<body>
+
+<h1>Ajouter un message</h1>
+
+<form action="/add" method="POST">
+    <input type="text" name="username" placeholder="Écris un message">
+    <input type="password" name="password" placeholder="Mot de passe">
+    <input type="date" name="date_anniversaire" placeholder="Veuillez rentrer une date d'anniversaire valide">
+    <button type="submit">Envoyer</button>
+</form>
+
+<form action="/supp" method="POST">
+    <input type="number" name="numero" placeholder="Numéro à supprimer">
+    <button type="submit">Supprimer</button>
+</form>
+
+<h2>Messages :</h2>
+
+{% if error %}
+    <p style ="color: red; font-weight: bold;">
+        {{ error }}
+    </p>
+{% endif %}
+
+{% if messages %}
+    <p style="color : green;font-weight: lighter;">
+        {{ succes}}
+    </p>
+{% endif %}
+
+
+<ul>
+{% for msg in messages %}
+    <li>
+        <strong>{{ msg.numero }}</strong> |
+        {{ msg.heure }} |
+        {{ msg.username }} |
+        {{ msg.password }}
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

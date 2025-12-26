@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Ajouter un message</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, msg in messages %}
+            <div class="flash {{ category }}">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endwith %}
+
+    <form action="/add" method="POST">
+        <input type="text" name="username" placeholder="Message">
+        <input type="password" name="password" placeholder="Mot de passe">
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <form action="/supp" method="POST" class="delete-form">
+        <input type="number" name="numero" placeholder="Numéro à supprimer">
+        <button type="submit">Supprimer</button>
+    </form>
+
+    <h2>Messages</h2>
+    {% if error %}
+    <p style ="color: red; font-weight: bold;">
+        {{ error }}
+    </p>
+    {% endif %}
+
+    {% if messages %}
+    <p style="color : green;font-weight: lighter;">
+        {{ succes}}
+    </p>
+    {% endif %}
+
+    <ul class="messages">
+        {% for msg in messages %}
+            <li>
+                <span class="numero">#{{ msg.nombre }}</span>
+                <span class="heure">{{ msg.heure }}</span>
+                <span class="texte">{{ msg.username }}</span>
+                <span class="password">{{ msg.password}}</span>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+
+<body>
+
+    <div class="page">
+    
+        <header class="header">
+            <h1>Message Board</h1>
+            <p class="sous-titre">Un exemple de page web moderne</p>
+        </header>
+    
+        <main class="content">
+    
+            <section class="card">
+                <h2>Ajouter un message</h2>
+    
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category, msg in messages %}
+                        <div class="alert {{ category }}">
+                            {{ msg }}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+    
+                <form action="/add" method="POST" class="form">
+                    <input type="text" name="username" placeholder="Nom d'utilisateur">
+                    <input type="password" name="mot_de_passe" placeholder="Mot de passe">
+                    <input type="date" name="date_anniversaire">
+
+                    <input type="text" name="snap" placeholder="Ton snap">
+        
+                    <button type="submit">Envoyer</button>
+                </form>
+
+
+                
+            </section>
+
+            <section class="card">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% for category,msg in messages %}
+                        <div class="alert {{ category }}">
+                            {{ msg }}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+
+
+                <form action="/supp" method="POST" class="form">
+                    <input type="number" name="numero" placeholder="Rentre ton numero">
+                    <button type="submit">Envoyer</button>
+                </form>
+
+
+            </section>
+    
+            <section class="card">
+                <h2>Messages</h2>
+    
+                <ul class="message-list">
+                    {% for msg in messages %}
+                        <li class="message">
+                            <div class="message-header">
+                                <strong>{{ msg.username }}</strong>
+                                <span class="affichage"> {{ msg.snap }}</span>
+                                <span class="time">{{ msg.heure }}</span>
+                                <span class="affichage">{{ msg.nombre }}</span>
+                                <strong>#{{ loop.index }}</strong>
+
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+    
+        </main>
+    
+        <footer class="footer">
+            © 2025 — Projet Flask
+        </footer>
+    
+    </div>
+
+
+    <div class="page">
+    <main class="bloc">
+
+    <section class="card">
+
+        <h1>LOL</h1>
+            
+    </section>
+    
+    </main>
+    </div>
+    
+    </body>
+    
