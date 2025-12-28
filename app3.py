@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 import os
 from storage import charger_messages, sauvegarder_messages 
+from models import Message
 app2= Flask(__name__)
 app2.secret_key = "cle-secrete"
 
@@ -44,16 +45,12 @@ def add_message():
             #error_message = "Doublon utilisateur/mot de passe existant"
             flash("Message doublon", "error")
             return redirect(url_for("home"))
-        
+    
+    nombre=len(Liste_message)
+    message=Message(message, password, nombre,snap)
+    Liste_message.append(message.to_dict())    
     flash("Message ajouté avec succès", "succes")
-    Liste_message.append({
-        "nombre": len(Liste_message) + 1,
-        "username": message,
-        "password": password,
-        "date_anniversaire":date_anniv,
-        "snap": snap,
-        "heure": datetime.now().strftime("%H:%M:%S")
-    })
+    
     sauvegarder_messages(Liste_message)
 
     return redirect(url_for("home"))
@@ -83,4 +80,4 @@ def supp():
         return redirect(url_for("home"))
 
 if __name__== "__main__":
-    app2.run(debug=True, host="0.0.0.0", port=5000)
+    app2.run(debug=True, host="0.0.0.0", port=8000)
