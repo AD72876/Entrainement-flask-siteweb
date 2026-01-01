@@ -52,11 +52,36 @@
                 {% endwith %}
 
 
-                <form action="/supp" method="POST" class="form">
+                <!-- /* <form action="/supp" method="POST" class="form">
                     <input type="number" name="numero" placeholder="Rentre ton numero">
                     <button type="submit">Envoyer</button>
+                </form> -->
+
+                <form action="/supp" method="POST" class="form" onsubmit="return confirm ('Es-tu sûr de vouloir supprimmer cette donnée utilisateur')">
+                    <input type="number" name="numero" placeholder="Rentre ton numero">
+                    <button type="submit">Supprimer</button>
                 </form>
 
+                {% for msg in messages %}
+                    <div class="message">
+                        {{ msg.username }} — {{ msg.heure }}
+
+                        <form action="/edit/{{ msg.numero }}" method="GET">
+                            <button type="submit">✏️ Modifier</button>
+                        </form>
+                    </div>
+                {% endfor %}
+
+
+            </section>
+
+            </section class="card">
+                <form action="/" method="GET" class ="form">
+                    <input type="text" name="q" placeholder="Rechercher une donnée">
+                    <button type="submit">Chercher</button>
+                </form>
+                
+                
 
             </section>
     

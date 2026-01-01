@@ -3,9 +3,9 @@ body {
     font-family: system-ui , sans-serif;
     background: linear-gradient(120deg, #f0f4ff, #0a2048);
 }
-
+    
 .page {
-    min-height: 100vh;
+    min-height: 200vh;
     display: flex;
     flex-direction: column;
 }

@@ -18,6 +18,9 @@ Mini application web developpée avec Flask permettant:
 - Messages flash (erreurs / succès)
 - Stockage persistant via JSON
 
+## Hashage pour les mots de passe
+- Stockage des mots de passes sous forme de hachés pour une meilleure sécurité 
+
 ## Installation (http://127.0.0.1:8000/)
 
 ```bash

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modifier message</title>
+</head>
+<body>
+
+<h1>Modifier le message #{{ msg.numero }}</h1>
+
+
+<form method="POST" action="/update/{{ msg.numero }}">
+    <input type="text" name="username" value="{{ msg.username }}">
+    <button type="submit">Sauvegarder</button>
+</form>
+
+<a href="/">Retour</a>
+
+</body>
+</html>
