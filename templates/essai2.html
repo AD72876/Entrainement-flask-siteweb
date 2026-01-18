@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <h1 class="logo">MessageBoard</h1>
+    </div>
+</header>
+
+<main class="main">
+
+    <section class="section form-section">
+        <h2>Ajouter un message</h2>
+
+        <form method="POST" action="/app" class="message-form">
+            <input type="text" name="username" placeholder="Nom d'utilisateur">
+            <input type="password" name="password" placeholder="Mot de passe">
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <section class="section messages-section">
+        <h2>Messages</h2>
+
+        <div class="messages-list">
+            {% for msg in messages %}
+                <div class="message-card">
+                    <div class="message-header">
+                        <span class="message-number">#{{ msg.numero }}</span>
+                        <span class="message-time">{{ msg.heure }}</span>
+                    </div>
+                    <p class="message-text">{{ msg.username }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Projet Flask — Amine</p>
+</footer>
+
+</body>
+</html>

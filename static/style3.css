@@ -3,9 +3,9 @@ body {
     font-family: system-ui , sans-serif;
     background: linear-gradient(120deg, #f0f4ff, #0a2048);
 }
-    
-.page {
-    min-height: 200vh;
+
+.page{
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -21,13 +21,26 @@ body {
     padding: 0px 10px;
 }
 
+.header_test {
+    padding: 0px 10px;
+    text-align: center;
+
+}
+
 .sous-titre {
     color: #181515;
 }
 
 .content {
     width: 800px;
+    margin:auto;
+}
+
+.content2{
+    width: 1000px;
     margin: auto;
+
+
 }
 
 .card {
@@ -36,6 +49,14 @@ body {
     border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card_center {
+    background-color: pink;
+    padding: 5px;
+    border-radius:30px;
+    margin-bottom: 10px;
+
 }
 
 .form input {
@@ -80,7 +101,7 @@ body {
 }
 
 .form_bis button {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     border: none;
     border-radius: 6px;
@@ -88,7 +109,7 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-
+ 
 
 }
 
@@ -125,10 +146,13 @@ body {
 
 .affichage{
     color:#0d0d0d;
-
-
-
 }
+.section_bis{
+    background-color: #0a2048;
+    text-align: center;
+}
+
+
 .footer {
     text-align: center;
     padding: 15px;

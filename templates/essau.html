@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Page de messages</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css')}}">
 </head>
 
 <body>
@@ -115,15 +115,24 @@
 
 
     <div class="page">
-    <main class="bloc">
+        <main class="content2">
+            <header class="header_test">
+                <h1>Page numero 2</h1>
+            </header>
+            <section class="card_center ">
+                <form action="/add" method="GET" class="form_bis">
+                    <input type="message" name="nom_utilisateur" >
+                    <input type="email" name="email" placeholder="exemple: benjamin-dupont@gmail.com">
+                    <button>Envoyer</button>
+                </form>
 
-    <section class="card">
-
-        <h1>LOL</h1>
-            
-    </section>
-    
-    </main>
+            </section>
+            <section class="section_bis">
+                ALLO
+            </section>
+            </section>
+        
+        </main>
     </div>
     
     </body>

@@ -19,7 +19,7 @@ Mini application web developpée avec Flask permettant:
 - Stockage persistant via JSON
 
 ## Hashage pour les mots de passe
-- Stockage des mots de passes sous forme de hachés pour une meilleure sécurité 
+- Stockage des mots de passe sous forme de hachés pour une meilleure sécurité (Ils sont hachés à l’aide de werkzeug.security.generate_password_hash, conformément aux bonnes pratiques de sécurité.)
 
 ## Installation (http://127.0.0.1:8000/)
 

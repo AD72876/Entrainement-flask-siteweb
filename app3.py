@@ -20,9 +20,6 @@ Liste_message=charger_messages()
 
 
 def home():
-    global error_message
-    err = error_message
-    error_message = None  # disparaît après affichage
     q=request.args.get("q","").lower()
     if q:
         messages_filtre=[
@@ -51,7 +48,7 @@ def add_message():
     password=generate_password_hash(password)
     date_anniv= request.form.get("date_anniversaire")
     snap= request.form.get("snap")
-    if not message or not password or not date_anniv:
+    if not message or not password :
         succes=False
         flash("Données manquant", "error")
         return redirect(url_for("home"))
