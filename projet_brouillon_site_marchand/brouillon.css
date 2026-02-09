@@ -1,0 +1,135 @@
+body{
+    background-color: aliceblue;
+}
+
+
+
+.block{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.serif {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+}
+
+.bloc{
+    flex-direction: column;
+    background-color: grey;
+    border-radius: 20px;
+    min-height: 50vh;
+    margin:auto;
+    width: 800px;
+    margin-top: 10px;
+}
+
+.square{
+    width: 200px;
+    height:auto;
+    border-radius: 10px;
+
+    background-color: white;
+    border:1px solid black;
+    
+}
+
+.bloc2{
+    flex-direction: column;
+    background-color: rgb(177, 159, 159);
+    border-radius: 20px;
+    min-height: 50vh;
+    margin:auto;
+    width: 800px;
+    margin-top: 30px;
+
+
+}
+
+.big_square{
+    width: 200px;
+    background-color: gold;
+    margin: 100px;
+    margin-top: 100px;
+    min-height:100px;
+
+    border-radius: 10px;
+
+}
+
+.rectangle {
+    width: 300px;
+    border-radius: 10px;
+    background-color: grey;
+}
+.coordonnee{
+    margin: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Header partie */
+
+header{
+    background-color: black;
+    align-content: center;
+    display: flex;
+    padding: 1px 8px;
+    color: white;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index: 1000;
+    color: black;
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.logo_adidas {
+    font-size: 30px;
+    color:white;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: grey;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.nav a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+
+}
+
+.cart-btn{
+    background: #007bff;
+    color: white;
+    border:none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+.serif a:hover {
+    color: #007bff;
+}

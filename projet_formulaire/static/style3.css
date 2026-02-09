@@ -4,6 +4,11 @@ body {
     background: linear-gradient(120deg, #f0f4ff, #0a2048);
 }
 
+.sherif {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 200px;
+}
+
 .page{
     min-height: 50vh;
     display: flex;
@@ -24,6 +29,7 @@ body {
 .header_test {
     padding: 0px 10px;
     text-align: center;
+    font-family: system-ui, sans-serif ;
 
 }
 
@@ -52,8 +58,8 @@ body {
 }
 
 .card_center {
-    background-color: pink;
-    padding: 5px;
+    background-color: rgb(192, 201, 255);
+    padding: 20px;
     border-radius:30px;
     margin-bottom: 10px;
 

@@ -1,0 +1,30 @@
+console.log("JS chargé");
+
+const titre = document.querySelector("#titre")
+titre.addEventListener("click", () =>{
+    alert("Titre cliqué");
+    titre.classList.toggle("hidden");
+});
+
+
+const alertBox= document.querySelector("#alert")
+
+setTimeout( () =>{
+    alertBox.classList.add("hidden");
+}, 10); 
+
+const boutton=document.querySelector("#btn");
+boutton.addEventListener("click", function() {
+    console.log("Le bouton a été cliqué");
+})
+
+const titre2= document.querySelector("#titre2")
+
+boutton.addEventListener("click", function(){
+    titre.classList.toggle("hidden");
+});
+
+const boutton2= document.querySelector("#btn2")
+boutton2.addEventListener("click", function (){
+    titre2.classList.toggle("hidden");
+});

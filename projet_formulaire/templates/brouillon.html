@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{url_for('static', filename='brouillon.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title> Page de brouillon pour retenir</title>
+</head>
+
+
+
+<body>
+  
+  <header>
+  <nav class="nav">
+    <a href="#">
+      <h1 id="titre" class="logo_adidas">Adidas</h1>
+    </a>
+  </nav>
+
+    <h2 id="titre2" class="hidden"> Not really</h2>
+
+
+  </header>
+
+  <header class="header">
+    <div class="logo"> Ma boutique </div>
+
+    <nav class="nav">
+      <a href="#" title="Accueil">
+        <i class="fa-solid fa-house"></i>
+        <span>Accueil</span>
+      </a>
+      <a href="#" title="Produits">
+        <i class="fa-solid fa-bag-shopping"> </i>
+        <span> Produits</span>
+      </a>
+
+      <a href="#" title="Contact"> <i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+    </nav>
+
+
+    <div class="actions">
+      <button class="cart-btn">Panier (0)</button>
+    </div>
+  </header>
+
+
+
+
+  <button id="btn2">Efface le titre 2</button>
+  <button id="btn"> Efface le titre 1</button>
+
+
+  <section class="bloc">
+
+    <div class="square">
+      <p> Mettre l'annonce ici</p>
+    </div>
+
+    <div class="alert">
+      <p> Erreur provenant de toi</p>
+    </div>
+
+  </section>
+  <section class="bloc2">
+  
+    <main class="content">
+      <section class="rectangle">
+        <button id="btn">Clique</button>
+      </section>
+
+      <section class="rectangle">
+        <button id="btn2"> Cache le titre</button>
+      </section>
+
+      <section class="big_square">
+        <form method="POST" class="coordonnee">
+
+        <input type="text" name="message" placeholder="entrer un message">
+        </form>
+        <a href="https://www.google.com" target="_blank">
+          Aller sur Google 
+        </a>
+      </section>
+  
+
+
+    </main>
+  </section>  
+  </main>
+
+</body>
+<script src="{{url_for('static', filename='brouillon.js')}}"></script>
+
+</html>
