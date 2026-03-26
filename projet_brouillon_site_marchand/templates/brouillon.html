@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{url_for('static', filename='brouillon.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title> Page de brouillon pour retenir</title>
+</head>
+
+<body>
+  
+  <header>
+    <div class="top">
+        <h2 id="sous_titre" class="hidden"> Change the World together</h2>
+    </div>
+    <div class="bottom">
+      <div>
+        <a href="#">
+          <img id="titre" class="logo" src="{{url_for('static', filename='photo/brouillon_logo.png')}}" alt="Logo de la boutique">
+        </a>
+        <span class="nom">Ma boutique</span> </div>
+          <nav class="nav">
+            <a href="#" title="Accueil">
+              <i class="fa-solid fa-house"></i>
+              <span>Accueil</span>
+            </a>
+            <a href="#" title="Produits">
+              <i class="fa-solid fa-bag-shopping"> </i>
+              <span> Produits</span>
+            </a>
+
+            <a href="#" title="Contact"> <i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+
+      
+
+            </a>
+          </nav>
+
+          <div class="actions">
+            <button class="cart-btn" id="panier">Panier (0)</button>
+            <button id="dark_mode">Mode Nuit</button>
+          </div>        
+
+    </div>
+
+  </header> 
+  <div class="container-grid">
+
+    
+    <div class="produits">
+      <a href="#" class="nav">
+      <span>Produit 1</span>
+      <img id="photo1" src="{{url_for('static', filename='photo/teddybear.png') }}  ">
+      </a>
+    </div>
+
+    
+    <div class="produits">
+      <a href="#" class="nav">
+      <span>Produit 2</span>
+      <img id="photo2" src="{{url_for('static', filename='photo/teddybear.png') }}">
+      </a>
+    </div>
+    <div class="produits">
+      <a href="#" class="nav">
+      <span>Produit 3</span>
+      <img id="photo3" src="{{url_for('static', filename='photo/teddybear.png')}}">
+      </a>
+    </div>
+
+  </div>
+  
+
+  <h1>Partie pas interessante</h1>
+  <section class="bloc">
+
+    <div class="square">
+      <p> Mettre l'annonce ici</p>
+    </div>
+
+    <div class="alert">
+      <p> Erreur provenant de toi</p>
+    </div>
+
+  </section>
+  <section class="bloc2">
+  
+    <main class="content">
+      <section class="rectangle">
+        <button id="btn">Clique</button>
+      </section>
+
+      <section class="rectangle">
+        <button id="btn2"> Cache le titre</button>
+      </section>
+
+      <section class="big_square">
+        <form method="POST" class="coordonnee">
+
+        <input type="text" name="message" placeholder="entrer un message">
+        </form>
+        <a href="https://www.google.com" target="_blank">
+          Aller sur Google 
+        </a>
+      </section>
+  
+
+  <button id="btn_sous_titre">Efface le sous titre 2</button>
+  <button id="btn_principal"> Efface le logo</button>
+  </section>  
+  </main>
+  <script src="{{url_for('static', filename='brouillon.js')}}"></script>
+
+
+</body>
+
+
+
+</html>

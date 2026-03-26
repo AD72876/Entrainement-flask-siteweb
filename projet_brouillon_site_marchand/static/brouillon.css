@@ -1,0 +1,235 @@
+body{
+    background-color: aliceblue;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+
+}
+
+.block{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.serif {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5px;
+}
+
+.bloc{
+    flex-direction: column;
+    background-color: grey;
+    border-radius: 20px;
+    min-height: 50vh;
+    margin:auto;
+    width: 800px;
+    margin-top: 10px;
+}
+
+.square{
+    width: 200px;
+    height:auto;
+    border-radius: 10px;
+
+    background-color: white;
+    border:1px solid black;
+    
+}
+
+.bloc2{
+    flex-direction: column;
+    background-color: rgb(177, 159, 159);
+    border-radius: 20px;
+    min-height: 50vh;
+    margin:auto;
+    width: 800px;
+    margin-top: 30px;
+
+
+}
+
+.big_square{
+    width: 200px;
+    background-color: gold;
+    margin: 100px;
+    margin-top: 100px;
+    min-height:100px;
+
+    border-radius: 10px;
+
+}
+
+
+.coordonnee{
+    margin: auto;
+}
+
+.hidden{
+
+
+    color: white;
+    font-size: 20px;
+}
+
+/* Header partie */
+
+header{
+    display: flex;
+    padding: 1px 8px;
+    position: sticky;
+    flex-direction: column;
+    height: auto;
+
+}
+
+.top, .bottom { height: 50px; }
+
+.top {
+    background:black;
+    justify-content: space-between;
+    align-content: center;  
+}
+
+.bottom {
+    background: white;
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    top:0;
+    z-index:1000;
+    color: black;
+    width: 100%;
+}
+
+.nom {
+    font-size: 24px;
+    font-weight: bold;
+    margin :0 5px;
+
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.logo img {
+    height: auto;
+}
+
+
+.logo_adidas {
+    font-size: 30px;
+    color:white;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: grey;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+
+
+    
+}
+
+.nav a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+
+}
+
+.produits:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+}
+
+.cart-btn{
+    background: #007bff;
+    color: white;
+    border:none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+.serif a:hover {
+    color: #007bff;
+}
+
+.center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark_mode{
+    background:black;
+}
+
+.white_header{
+    background:white;
+    
+}
+
+.container-grid{
+    display:grid;
+    grid-template-columns: repeat(3,300px);
+    gap: 100px;
+    width: fit-content;
+    margin: auto;
+    padding : 50px 0;
+}
+
+.produits{
+    max-height: auto;
+    max-width: 300px;
+    background-color: beige;
+    padding: 2px;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.produits img {
+    width: 100px;
+    height:auto;
+    padding: 0  200px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+}
+
+.produits a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500px;
+    transition: color 0;
+    color: grey;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+    margin: 0 15px;
+    
+
+    
+    
+}
+.produits a:hover{
+    color: blue;
+    transform: scale(1.2);
+}
+
+.nav img{
+    border-bottom-right-radius:12px ;
+    border-top-right-radius: 12px;
+}
